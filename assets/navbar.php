@@ -6,13 +6,13 @@
   <div >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Alunos</a>
+        <a class="nav-link" href="templates/aluno/telaListaAlunos.php">Alunos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="telaListaTurmas.php">Turmas</a>
+        <a class="nav-link" href="templates/turma/telaListaTurmas.php">Turmas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="telaListaDisciplinas.php">Disciplinas</a>
+        <a class="nav-link" href="templates/disciplina/telaListaDisciplinas.php">Disciplinas</a>
       </li>
     </ul>
   </div>

@@ -1,6 +1,6 @@
-<?php include_once("turmaDao.php") ?>
+<?php include_once("../../db/turmaDao.php") ?>
 <div class="p-3">
-    <form action="matriculaAluno.php" method="POST">
+    <form action="../../modules/matriculaAluno.php" method="POST">
         <div class="form-group">
             <label for="turma">Escolha a turma para registrar o aluno</label>
             <select name="turma" id="turma" class="form-control">

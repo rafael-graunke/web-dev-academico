@@ -1,6 +1,6 @@
 <?php
 
-include_once("alunoDao.php");
+include_once(ROOT."db/alunoDao.php");
 
 ?>
 
@@ -11,8 +11,8 @@ include_once("alunoDao.php");
 </head>
 
 <body>
-    <?php include('navbar.php') ?>
-    <?php include('modal.php') ?>
+    <?php include(ROOT.'assets/navbar.php') ?>
+    <?php include(ROOT.'assets/modal.php') ?>
     <div class="container p-0 mt-3">
         <h3>Tabela <small class="text-muted">de alunos</small></h3>
     </div>
