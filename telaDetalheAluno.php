@@ -1,5 +1,5 @@
-<?php include_once("alunoDao.php"); ?>
-<?php include_once("turmaDao.php"); ?>
+<?php include_once("db/alunoDao.php"); ?>
+<?php include_once("db/turmaDao.php"); ?>
 <?php $id_aluno = $_GET['id']; ?>
 <?php $aluno = buscaAluno($id_aluno)[0]; ?>
 <?php $turmas = buscaTurmasPorAluno($_GET['id']); ?>
@@ -14,18 +14,18 @@
     <title>Detalhes Aluno</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <?php include('navbar.php') ?>
-    <?php include('modal.php') ?>
+    <?php include('assets/navbar.php') ?>
+    <?php include('assets/modal.php') ?>
     <div class="wrapper">
         <div class="row p-0 m-0">
             <div class="col-auto p-0">
                 <div class="sidebar active" id="sidebar">
                     <div class="sidebar-header">
-                        <img src="img/user_default.png" width="150px" class="rounded-circle mb-2">
+                        <img src="assets/img/user_default.png" width="150px" class="rounded-circle mb-2">
                         <h3><?php echo $aluno['nome_aluno'] ?></h3>
                         <p><i class="bi bi-envelope"></i> <?php echo $aluno['email_aluno'] ?></p>
                         <hr>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="sidebar-tab">
                         <a class="w-100 h-100 d-block text-center" href="#" id="sidebar-collapse">
-                            <img src="img/caret.png" width="20px" alt="" id="caret">
+                            <img src="assets/img/caret.png" width="20px" alt="" id="caret">
                         </a>
                     </div>
                 </div>
@@ -112,8 +112,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/sidebar.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

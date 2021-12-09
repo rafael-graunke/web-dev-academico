@@ -1,6 +1,6 @@
 <?php
-include_once("alunoDao.php");
+include_once("../db/alunoDao.php");
 
 excluiAluno($_GET['id']);
 
-header("Location: index.php");
+header("Location: ../index.php");

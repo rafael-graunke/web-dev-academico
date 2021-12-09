@@ -1,5 +1,5 @@
 <?php
-include_once("alunoDao.php");
+include_once("db/alunoDao.php");
 if (isset($_GET["id"])) {
     $id_aluno = $_GET['id'];
     $aluno = buscaAluno($id_aluno)[0];
@@ -10,7 +10,7 @@ if (isset($_GET["id"])) {
 
 <div class="wrapper p-3">
     <?php if (isset($_GET["id"])) { ?>
-        <form action="alteraAluno.php" method="post">
+        <form action="modules/alteraAluno.php" method="post">
             <div class="form-group">
                 <label for="novoNome">Insira o novo nome do aluno:</label>
                 <input type="text" name="novoNome" id="novoNome" class="form-control" value="<?php echo $nome ?>">
