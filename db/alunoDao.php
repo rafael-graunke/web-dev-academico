@@ -16,10 +16,11 @@ function insereAluno($nome, $email)
         return buscaIdPorEmail($email);
     } catch (PDOException $e) {
         echo "Erro na conexão. Erro gerado: " . $e->getMessage();
-    }    
+    }
 }
 
-function buscaIdPorEmail($email) {
+function buscaIdPorEmail($email)
+{
     $conexao = criaConexao();
 
     $sql = "SELECT id_aluno FROM aluno WHERE email_aluno = :email";
@@ -39,6 +40,22 @@ function buscaTodosAlunos()
     $sql = "SELECT * FROM aluno";
 
     $stmt = $conexao->prepare($sql);
+    $stmt->execute();
+
+    $resultado = $stmt->fetchAll();
+    return $resultado;
+}
+
+function buscaAlunosPorNome($n)
+{
+    $nome = $n."%";
+
+    $conexao = criaConexao();
+
+    $sql = "SELECT * FROM aluno WHERE nome_aluno LIKE :nome";
+
+    $stmt = $conexao->prepare($sql);
+    $stmt->bindParam(":nome", $nome);
     $stmt->execute();
 
     $resultado = $stmt->fetchAll();
@@ -96,4 +113,3 @@ function alteraAluno($id, $nomeNovo, $emailNovo)
         echo $e->getMessage();
     }
 }
-
