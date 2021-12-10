@@ -46,7 +46,7 @@
                     <div class="alert alert-success">
                         Aluno cadastrado com sucesso. 
                         <?php if (isset($_GET['id'])) { ?>
-                            Clique <strong><a class="text-deco-none" href="telaDetalheAluno.php?id=<?php echo $_GET['id'] ?>">aqui </a></strong>
+                            Clique <strong><a class="text-deco-none" href="telaAlunoDetalhe.php?id=<?php echo $_GET['id'] ?>">aqui </a></strong>
                             para configurar o aluno.
                         <?php } ?>
                     </div>

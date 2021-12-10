@@ -8,4 +8,4 @@ $novoEmail = $_POST['novoEmail'];
 
 alteraAluno($id,$novoNome,$novoEmail);
 
-header("Location: ../telaDetalheAluno.php?id=".$id."&alt=1");
+header("Location: ../telaAlunoDetalhe.php?id=".$id."&alt=1");

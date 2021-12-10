@@ -7,6 +7,6 @@ $id_turma = $_GET['turma'];
 
 removeInscricao($id_aluno, $id_turma);
 
-header("Location: ../telaDetalheAluno.php?id=".$id_aluno);
+header("Location: ../telaAlunoDetalhe.php?id=".$id_aluno);
 
 ?>

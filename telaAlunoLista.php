@@ -21,7 +21,7 @@
                     <th scope="col">E-mail</th>
                     <th scope="col">
                         <div class="float-right">
-                            <a title="Adicionar" href="telaAdicionaAluno.php" class="text-deco-none">
+                            <a title="Adicionar" href="telaAlunoAdiciona.php" class="text-deco-none">
                                 <h5 class="m-0">
                                     <i class="bi bi-plus-square-fill"></i>
                                 </h5>
@@ -36,7 +36,7 @@
                         <td><?php echo $aluno['nome_aluno'] ?></td>
                         <td><?php echo $aluno['email_aluno'] ?></td>
                         <td class="d-flex justify-content-end">
-                            <a class="text-deco-none ml-2" href="telaDetalheAluno.php?id=<?php echo $aluno['id_aluno'] ?>">
+                            <a class="text-deco-none ml-2" href="telaAlunoDetalhe.php?id=<?php echo $aluno['id_aluno'] ?>">
                                 <i class="text-deco-none bi bi-gear-fill" title="Configurar Aluno"></i>
                             </a>
                         </td>

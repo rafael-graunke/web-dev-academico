@@ -98,10 +98,10 @@
                     </div>
                     <div id="selector">
                         <div data-parent="#selector" class="collapse mt-3 rounded border <?php if (isset($_GET['mtr']) && $_GET['mtr'] == '1') echo 'show' ?>" id="collapseCadastro">
-                            <?php include("telaMatriculaAluno.php") ?>
+                            <?php include("telaAlunoMatricula.php") ?>
                         </div>
                         <div data-parent="#selector" class="collapse mt-3 rounded border <?php if (isset($_GET['alt']) && $_GET['alt'] == '1') echo 'show' ?>" id="collapseAltera">
-                            <?php include("telaAlteraAluno.php") ?>
+                            <?php include("telaAlunoAltera.php") ?>
                         </div>
                     </div>
                 </div>

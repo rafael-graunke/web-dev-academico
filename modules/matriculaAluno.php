@@ -7,6 +7,6 @@ $turma = $_POST['turma'];
 
 criaInscricao($aluno, $turma);
 
-header("Location: ../telaDetalheAluno.php?id=".strval($aluno)."&mtr=1");
+header("Location: ../telaAlunoDetalhe.php?id=".strval($aluno)."&mtr=1");
 
 ?>
