@@ -8,13 +8,13 @@
     <title>Adiciona Aluno</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <?php include('navbar.php') ?>
+    <?php include('assets/navbar.php') ?>
     <div class="container p-0">
-        <form action="adicionaAluno.php" method="post" class="mb-2">
+        <form action="modules/adicionaAluno.php" method="post" class="mb-2">
             <div class="form-group">
                 <label for="nome">Insira o nome do aluno:</label>
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="Aluno">

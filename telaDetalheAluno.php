@@ -47,7 +47,7 @@
                                 </p>
                             </li>
                             <li>
-                                <p><a class="remove-item" href="removeAluno.php?id=<?php echo $aluno['id_aluno'] ?>" data-toggle="modal" data-target="#exampleModal">Excluir aluno</a></p>
+                                <p><a class="remove-item" href="modules/removeAluno.php?id=<?php echo $aluno['id_aluno'] ?>" data-toggle="modal" data-target="#exampleModal">Excluir aluno</a></p>
                             </li>
                         </ul>
                     </div>
