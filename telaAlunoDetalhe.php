@@ -80,7 +80,7 @@
                                             <td><?php echo $turma['semestre'] ?>°</td>
                                             <td><?php echo $turma['ano'] ?></td>
                                             <td>
-                                                <a class="text-deco-none" href="removeMatricula.php?aluno=<?php echo $id_aluno ?>&turma=<?php echo $turma['turma'] ?>">
+                                                <a class="text-deco-none" href="modules/removeMatricula.php?aluno=<?php echo $id_aluno ?>&turma=<?php echo $turma['turma'] ?>">
                                                 <i class="bi bi-trash-fill icon-red"></i>
                                                 </a>
                                             </td>
