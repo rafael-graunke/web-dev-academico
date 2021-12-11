@@ -24,9 +24,8 @@ function buscaTodasTurmas() {
     $conexao = criaConexao();
 
     $sql = "SELECT disciplina.nome AS disciplina,
-    turma.ano, turma.semestre, turma.id_turma AS turma FROM disciplina
-    INNER JOIN turma ON turma.id_disciplina = disciplina.id_disciplina
-    ORDER BY disciplina.nome";
+    turma.ano AS ano, turma.semestre AS semestre, turma.id_turma AS turma FROM disciplina
+    INNER JOIN turma ON turma.id_disciplina = disciplina.id_disciplina";
 
     $stmt = $conexao->prepare($sql);
     $stmt->execute();
