@@ -7,6 +7,7 @@ if (isset($_GET["id"])) {
     $email = $aluno['email_aluno'];
 }
 ?>
+<?php include_once("modules/auth.php") ?>
 
 <div class="wrapper p-3">
     <?php if (isset($_GET["id"])) { ?>

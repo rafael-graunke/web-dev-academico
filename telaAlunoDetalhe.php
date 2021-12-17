@@ -1,5 +1,6 @@
 <?php include_once("db/alunoDao.php"); ?>
 <?php include_once("db/turmaDao.php"); ?>
+<?php include_once("modules/auth.php") ?>
 <?php $id_aluno = $_GET['id']; ?>
 <?php $aluno = buscaAluno($id_aluno)[0]; ?>
 <?php $turmas = buscaTurmasPorAluno($_GET['id']); ?>
