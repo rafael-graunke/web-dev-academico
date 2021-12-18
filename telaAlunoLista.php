@@ -51,31 +51,31 @@
                 } else {
                     $lista = buscaTodosAlunos();
                 }
-                
+
                 if (!empty($lista)) {
                     foreach ($lista as $aluno) {
                 ?>
-                    <tr>
-                        <td><?php echo $aluno['nome_aluno'] ?></td>
-                        <td><?php echo $aluno['email_aluno'] ?></td>
-                        <td class="d-flex justify-content-end">
-                            <a class="text-deco-none ml-2" href="telaAlunoDetalhe.php?id=<?php echo $aluno['id_aluno'] ?>">
-                                <i class="text-deco-none bi bi-gear-fill" title="Configurar Aluno"></i>
-                            </a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?php echo $aluno['nome_aluno'] ?></td>
+                            <td><?php echo $aluno['email_aluno'] ?></td>
+                            <td class="d-flex justify-content-end">
+                                <a class="text-deco-none ml-2" href="telaAlunoDetalhe.php?id=<?php echo $aluno['id_aluno'] ?>">
+                                    <i class="text-deco-none bi bi-gear-fill" title="Configurar Aluno"></i>
+                                </a>
+                            </td>
+                        </tr>
                     <?php } ?>
                 <?php } else { ?>
                     <tr>
                         <td colspan="3">
-                            <i>Nenhum aluno encontrado para a pesquisa "<?php echo $_GET['nome']?>".</i>
+                            <i>Nenhum aluno encontrado para a pesquisa "<?php echo $_GET['nome'] ?>".</i>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
-    
+
     <?php include("includes/footer.php") ?>
-    
+
 </body>
