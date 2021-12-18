@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-light" style="position: sticky;">
+<nav class="navbar navbar-expand navbar-light bg-light" style="position: sticky; top: 0px; z-index: 100;">
   <a class="navbar-brand" href="#">
     <img src="assets/img/academico_logo.webp" width="30" height="30" class="d-inline-block align-top" alt="">
     Acadêmico

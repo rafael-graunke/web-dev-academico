@@ -1,4 +1,5 @@
 <?php include_once("db/turmaDao.php") ?>
+<?php include_once("modules/auth.php") ?>
 <div class="p-3">
     <form action="modules/matriculaAluno.php" method="POST">
         <div class="form-group">
