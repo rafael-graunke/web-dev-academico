@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `aluno`;
 CREATE TABLE `aluno` (
   `id_aluno` int NOT NULL AUTO_INCREMENT,
   `nome_aluno` varchar(100) NOT NULL,
-  `email_aluno` varchar(50) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `email_aluno` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id_aluno`),
   UNIQUE KEY `id_aluno` (`id_aluno`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +135,7 @@ CREATE TABLE `usuario` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
