@@ -95,3 +95,15 @@
   background: rgb(0,108,255);
   background: linear-gradient(135deg, rgba(0,108,255,1) 0%, rgba(85,188,255,1) 100%);
 }
+
+.selector {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.login-container {
+  margin-bottom: 5rem!important;
+}
