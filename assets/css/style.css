@@ -81,6 +81,17 @@
 }
 
 .content {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 72px);
   overflow-y: auto;
+}
+
+.login {
+  background: white;
+  width: 300px;
+}
+
+.login-bg {
+  height: 100vh;
+  background: rgb(0,108,255);
+  background: linear-gradient(135deg, rgba(0,108,255,1) 0%, rgba(85,188,255,1) 100%);
 }
