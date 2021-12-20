@@ -3,31 +3,14 @@
 
 <body>
     <?php include("assets/navbar.php") ?>
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col">
-                <div class="rounded border mx-auto" style="width: 200px; height: 250px;">
-
-                </div>
-                <div class="text-center">
-                    <a class="btn btn-success mt-2" href="#">Teste</a>  
-                </div>
-            </div>
-            <div class="col">
-                <div class="rounded border mx-auto" style="width: 200px; height: 250px;">
-
-                </div>
-                <div class="text-center">
-                    <a class="btn btn-success mt-2" href="#">Teste</a>  
-                </div>
-            </div>
-            <div class="col">
-                <div class="rounded border mx-auto" style="width: 200px; height: 250px;">
-
-                </div>
-                <div class="text-center">
-                    <a class="btn btn-success mt-2" href="#">Teste</a>  
-                </div>
+    <div class="screen-fill d-flex align-items-center justify-content-center">
+        <div class="container h-90">
+            <div class="row h-100">
+                <div class="col rounded border"></div>
+                <div class="col-1"></div>
+                <div class="col rounded border" style="min-height: 100%;"></div>
+                <div class="col-1"></div>
+                <div class="col rounded border"></div>
             </div>
         </div>
     </div>
