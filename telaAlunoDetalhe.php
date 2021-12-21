@@ -42,7 +42,7 @@
                         </ul>
                     </div>
                     <div class="sidebar-footer">
-                        <a href="index.php" class="btn btn-primary"><i class="bi bi-house-door-fill"></i> Voltar</a>
+                        <a href="telaAlunoLista.php" class="btn btn-primary"><i class="bi bi-house-door-fill"></i> Voltar</a>
                     </div>
                     <div class="sidebar-tab">
                         <a class="w-100 h-100 d-block text-center" href="#" id="sidebar-collapse">
