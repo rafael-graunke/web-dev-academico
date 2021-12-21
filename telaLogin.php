@@ -11,7 +11,7 @@
                 <h5>Bem-Vindo</h5>
                 <form action="modules/login.php" method="POST">
                     <div class="form-group">
-                        <input type="email" name="user" id="user" placeholder="E-mail" class="form-control">
+                        <input type="text" name="user" id="user" placeholder="Usuário ou E-mail" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="password" name="pass" id="pass" placeholder="Senha" class="form-control">
