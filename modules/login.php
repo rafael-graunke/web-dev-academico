@@ -6,7 +6,7 @@ $pass = $_POST['pass'];
 
 $usuario = buscaUsuario($user);
 
-if (count($usuario) > 0) {
+if ($usuario != null) {
     $hash = $usuario['senha'];
     if (password_verify($pass, $hash)) {
         session_start();

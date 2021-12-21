@@ -57,7 +57,7 @@
             <div class="col p-0">
                 <div class="content p-5">
                     <h5>Alterar Dados</h5>
-                    <div class="border rounded p-3">
+                    <div class="border border-dark rounded p-3">
                         <form action="" method="POST">
                             <div class="form-group">
                                 <label for="nome_completo">Nome Completo</label>
@@ -67,26 +67,35 @@
                                 <label for="email">E-mail</label>
                                 <input class="form-control" type="email" name="email" id="email" value="<?php echo $usuario['email'] ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="senha">Nova Senha</label>
-                                <input class="form-control" type="password" name="senha" id="senha" placeholder="Nova Senha">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha">
-                            </div>
                             <div class="form-group d-flex justify-content-end">
-                                <button type="submit" class="btn btn-success">Alterar</button>
+                                <button type="submit" class="btn btn-success">Alterar Dados</button>
                             </div>
-                            <div class="alert alert-danger d-none" id="senha_aviso">
-                                As senhas não correspondem
-                            </div>
+                            <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>">
                         </form>
+                    </div>
+                    <br>
+                    <h5>Alterar Senha</h5>
+                    <div class="border border-dark rounded p-3">
+                        <div class="form-group">
+                            <label for="senha">Nova Senha</label>
+                            <input class="form-control" type="password" name="senha" id="senha" placeholder="Nova Senha">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha">
+                        </div>
+                        <div class="alert alert-danger d-none" id="senha_aviso">
+                            As senhas não correspondem
+                        </div>
+                        <div class="form-group d-flex justify-content-end">
+                            <button type="submit" class="btn btn-success">Alterar Senha</button>
+                        </div>
+                        <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <?php include("includes/footer.php") ?>
     <script src="assets/js/password.js"></script>
 
