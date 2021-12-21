@@ -20,7 +20,7 @@
                 <img src="assets/img/user_default.png" class="rounded-circle m-0" width="40px">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userOptions">
-                <a class="dropdown-item d-flex justify-content-between px-3" href="#">
+                <a class="dropdown-item d-flex justify-content-between px-3" href="telaUsuarioDetalhe.php">
                     Configurações
                     <i class="text-deco-none bi bi-gear-fill"></i>
                 </a>

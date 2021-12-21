@@ -27,22 +27,6 @@
                         <hr>
                     </div>
                     <div class="sidebar-body">
-                        <ul class="nav flex-column">
-                            <li>
-                                <p>
-                                    <a data-toggle="collapse" href="#collapseCadastro" role="button" aria-expanded="false" aria-controls="collapseCadastro">
-                                        Matricular aluno em nova turma
-                                    </a>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <a data-toggle="collapse" href="#collapseAltera" role="button" aria-expanded="false" aria-controls="collapseAltera">
-                                        Alterar dados do aluno
-                                    </a>
-                                </p>
-                            </li>
-                        </ul>
                     </div>
                     <div class="sidebar-footer">
                         <a href="index.php" class="btn btn-primary"><i class="bi bi-house-door-fill"></i> Voltar</a>
@@ -58,7 +42,7 @@
                 <div class="content p-5">
                     <h5>Alterar Dados</h5>
                     <div class="border border-dark rounded p-3">
-                        <form action="" method="POST">
+                        <form action="modules/alteraUsuario.php" method="POST">
                             <div class="form-group">
                                 <label for="nome_completo">Nome Completo</label>
                                 <input class="form-control" type="text" name="nome_completo" id="nome_completo" value="<?php echo $usuario['nome_completo'] ?>">
@@ -76,20 +60,25 @@
                     <br>
                     <h5>Alterar Senha</h5>
                     <div class="border border-dark rounded p-3">
-                        <div class="form-group">
-                            <label for="senha">Nova Senha</label>
-                            <input class="form-control" type="password" name="senha" id="senha" placeholder="Nova Senha">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha">
-                        </div>
-                        <div class="alert alert-danger d-none" id="senha_aviso">
-                            As senhas não correspondem
-                        </div>
-                        <div class="form-group d-flex justify-content-end">
-                            <button type="submit" class="btn btn-success">Alterar Senha</button>
-                        </div>
-                        <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>">
+                        <form action="modules/alteraUsuarioSenha.php" method="post">
+                            <div class="form-group">
+                                <label for="senha">Nova Senha</label>
+                                <input class="form-control" type="password" name="senha" id="senha" placeholder="Nova Senha">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha">
+                            </div>
+                            <div class="alert alert-danger d-none" id="senha_aviso">
+                                As senhas não correspondem
+                            </div>
+                            <div class="alert alert-danger" <?php if(!isset($_GET['error'])) { echo "hidden"; }?> >
+                                Nào foi possível alterar a senha, pois as senhas não correspondem.
+                            </div>
+                            <div class="form-group d-flex justify-content-end">
+                                <button type="submit" class="btn btn-success">Alterar Senha</button>
+                            </div>
+                            <input type="hidden" name="id" value="<?php echo $_SESSION['id'] ?>">
+                        </form>
                     </div>
                 </div>
             </div>
