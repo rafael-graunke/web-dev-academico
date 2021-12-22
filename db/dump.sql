@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.27, for Linux (x86_64)
+-- MariaDB dump 10.19  Distrib 10.4.22-MariaDB, for Win64 (AMD64)
 --
 -- Host: localhost    Database: academico
 -- ------------------------------------------------------
--- Server version	8.0.27-0ubuntu0.20.04.1
+-- Server version	10.4.22-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,14 +21,14 @@
 
 DROP TABLE IF EXISTS `aluno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `aluno` (
-  `id_aluno` int NOT NULL AUTO_INCREMENT,
+  `id_aluno` int(11) NOT NULL AUTO_INCREMENT,
   `nome_aluno` varchar(100) NOT NULL,
-  `email_aluno` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
+  `email_aluno` varchar(50) NOT NULL,
   PRIMARY KEY (`id_aluno`),
   UNIQUE KEY `id_aluno` (`id_aluno`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `aluno` (
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
-INSERT INTO `aluno` VALUES (1,'NijuNey','eyakobowit0@intel.com'),(2,'Fraser','fofairy1@skyrock.com'),(3,'Jamey','jlyddiatt2@imdb.com'),(4,'Amargo','achristoforou3@aboutads.info'),(5,'Cloris','ccasella4@bloglovin.com'),(6,'Rod','rarthan5@weebly.com'),(8,'Esther','ewoodford7@blogspot.com'),(9,'Mike','mvear8@wikipedia.org'),(10,'Vonni','vcruikshanks9@pinterest.com'),(11,'Teodorico','theindricka@feedburner.com'),(12,'Gabriela','gsainesb@geocities.jp'),(13,'Bertie','bbarrouxc@weibo.com'),(14,'Malinde','mnelthorpd@woothemes.com'),(15,'Tanya','tasife@google.es'),(16,'Alvera','asinclarf@google.co.uk'),(17,'Dana','dramsellg@woothemes.com'),(18,'Iseabal','izukermanh@paypal.com'),(19,'Jill','jfrancisi@ovh.net'),(20,'Larisa','lkeepj@google.nl'),(21,'Dorothea','dnoirk@archive.org'),(22,'Jamill','jnarramorl@ebay.com'),(23,'Syman','schalfontm@eventbrite.com'),(24,'Hedda','hginnanen@tripadvisor.com'),(25,'Eben','edowningo@boston.com'),(26,'Sabina','sleftlyp@jiathis.com'),(27,'Gusty','gnurseq@clickbank.net'),(28,'Martica','mmacgahyr@friendfeed.com'),(29,'Nicolina','nbernhardssons@statcounter.com');
+INSERT INTO `aluno` VALUES (3,'Ricardo','jlyddiatt2@imdb.com'),(4,'Amargo','achristoforou3@aboutads.info'),(6,'Rod','rarthan5@weebly.com'),(8,'Esther','ewoodford7@blogspot.com'),(9,'Mike','mvear8@wikipedia.org'),(10,'Vonni','vcruikshanks9@pinterest.com'),(11,'Teodorico','theindricka@feedburner.com'),(12,'Gabriela','gsainesb@geocities.jp'),(13,'Bertie','bbarrouxc@weibo.com'),(14,'Malinde','mnelthorpd@woothemes.com'),(15,'Tanya','tasife@google.es'),(16,'Alvera','asinclarf@google.co.uk'),(17,'Dana','dramsellg@woothemes.com'),(18,'Iseabal','izukermanh@paypal.com'),(19,'Jill','jfrancisi@ovh.net'),(20,'Larisa','lkeepj@google.nl'),(21,'Dorothea','dnoirk@archive.org'),(22,'Jamill','jnarramorl@ebay.com'),(23,'Syman','schalfontm@eventbrite.com'),(24,'Hedda','hginnanen@tripadvisor.com'),(25,'Eben','edowningo@boston.com'),(26,'Sabina','sleftlyp@jiathis.com'),(27,'Gusty','gnurseq@clickbank.net'),(28,'Martica','mmacgahyr@friendfeed.com'),(29,'Nicolina','nbernhardssons@statcounter.com');
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -47,12 +47,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `disciplina`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `disciplina` (
-  `id_disciplina` int NOT NULL AUTO_INCREMENT,
+  `id_disciplina` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`id_disciplina`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,18 +71,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `inscricao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `inscricao` (
-  `id_inscricao` int NOT NULL AUTO_INCREMENT,
-  `aluno` int NOT NULL,
-  `turma` int NOT NULL,
+  `id_inscricao` int(11) NOT NULL AUTO_INCREMENT,
+  `aluno` int(11) NOT NULL,
+  `turma` int(11) NOT NULL,
   PRIMARY KEY (`id_inscricao`),
   UNIQUE KEY `id_inscricao_UNIQUE` (`id_inscricao`),
   KEY `fk_inscricao_1_idx` (`aluno`),
   KEY `fk_inscricao_2_idx` (`turma`),
-  CONSTRAINT `fk_inscricao_1` FOREIGN KEY (`aluno`) REFERENCES `aluno` (`id_aluno`) ON DELETE CASCADE ON UPDATE RESTRICT,
+  CONSTRAINT `fk_inscricao_1` FOREIGN KEY (`aluno`) REFERENCES `aluno` (`id_aluno`) ON DELETE CASCADE,
   CONSTRAINT `fk_inscricao_2` FOREIGN KEY (`turma`) REFERENCES `turma` (`id_turma`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,7 +91,7 @@ CREATE TABLE `inscricao` (
 
 LOCK TABLES `inscricao` WRITE;
 /*!40000 ALTER TABLE `inscricao` DISABLE KEYS */;
-INSERT INTO `inscricao` VALUES (2,1,3);
+INSERT INTO `inscricao` VALUES (10,6,1);
 /*!40000 ALTER TABLE `inscricao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,16 +101,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `turma`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `turma` (
-  `id_turma` int NOT NULL AUTO_INCREMENT,
-  `id_disciplina` int NOT NULL,
-  `ano` int NOT NULL,
-  `semestre` int DEFAULT NULL,
+  `id_turma` int(11) NOT NULL AUTO_INCREMENT,
+  `id_disciplina` int(11) NOT NULL,
+  `ano` int(11) NOT NULL,
+  `semestre` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_turma`),
   KEY `fk_turma_1_idx` (`id_disciplina`),
   CONSTRAINT `fk_turma_1` FOREIGN KEY (`id_disciplina`) REFERENCES `disciplina` (`id_disciplina`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,13 +129,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(50) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `nome_completo` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_general_ci;
+  PRIMARY KEY (`id`,`usuario`,`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +146,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (7,'admin@admin.com','$2y$10$kYXn79yMyPRiXWpJs.l9pOedVGuCDTB9XElOSO2/QmkGITTiTLlXm');
+INSERT INTO `usuario` VALUES (1,'admin','$2y$10$mVViHQFmxzA5SpGVPdxhru4kg4eqlxyGEKctcd3z2WMfxpf1H9722','Administrador','admin@admin.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -157,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-18 19:53:27
+-- Dump completed on 2021-12-21 20:33:16
